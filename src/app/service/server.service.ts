@@ -1,6 +1,6 @@
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { getServers } from 'dns';
+
 import { Observable, throwError } from 'rxjs';
 import { tap, catchError } from 'rxjs/operators';
 import { Status } from '../enum/status.enum';
@@ -13,7 +13,7 @@ import { Server } from '../interface/server';
 })
 export class ServerService {
 
-  private readonly apiUrl = 'http://localhost/8080';
+  private readonly apiUrl = 'http://localhost:8080';
 
   constructor(private http: HttpClient) { }
 
